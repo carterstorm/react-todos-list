@@ -1,3 +1,5 @@
+import { Form } from "./Form";
+
 function App() {
   return (
     <main className="container">
@@ -5,10 +7,7 @@ function App() {
       <section className="section">
         <h2 className="section__header">Add a new task</h2>
         <div className="section__body">
-          <form className="form">
-            <input className="form__input" type="text" placeholder="Type here what are you gonna do?"/>
-            <button className="button">Add task</button>
-          </form>
+          <Form/>
         </div>
       </section>
       <section className="section">

@@ -1,0 +1,23 @@
+.form {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    gap: 20px;
+}
+
+@media (max-width: 600px) {
+    .form {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form__input {
+    height: 30px;
+    padding: 0 15px;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+}
+
+.form__input::placeholder {
+    color: #ccc;
+    font-weight: 200;
+}
