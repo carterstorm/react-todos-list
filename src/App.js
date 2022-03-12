@@ -1,6 +1,11 @@
 import { Form } from "./Form";
+import { Buttons } from "./Buttons";
 
 function App() {
+
+  let tasks = [];
+  let hideButtons = false;
+
   return (
     <main className="container">
       <h1>To-do list</h1>
@@ -13,7 +18,7 @@ function App() {
       <section className="section">
         <div className="section__container">
           <h2 className="section__header section__header--offborder">What you need to do:</h2>
-            <div className="section__buttons"></div>
+            <Buttons tasks={tasks} hideTaskButtons={hideButtons}/>
         </div>
         <div className="section__body">
           <ul className="list">

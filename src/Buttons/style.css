@@ -1,0 +1,13 @@
+.buttons {
+    padding: 25px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+
+@media (max-width: 600px) {
+    .buttons {
+        grid-template-columns: 1fr;
+        padding: 15px 25px;
+    }
+}
