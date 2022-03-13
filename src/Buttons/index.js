@@ -8,7 +8,7 @@ const Buttons = ({tasks, hideButtons}) => {
     return (
         <div className="buttons">
             <button 
-                className="button">{`${hideButtons ? "Show" : "Hide"}`} 
+                className="button">{`${hideButtons ? "Show " : "Hide "}`} 
             done
             </button>
             <button 

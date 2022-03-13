@@ -1,6 +1,7 @@
 import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { List } from "./List";
+import { Section } from "./Section";
 
 function App() {
 
@@ -12,26 +13,21 @@ function App() {
       id: 2, content: "Example 2", done: false
     },
   ];
+  
   let hideButtons = false;
 
   return (
     <main className="container">
       <h1>To-do list</h1>
-      <section className="section">
-        <h2 className="section__header">Add a new task</h2>
-        <div className="section__body">
-          <Form/>
-        </div>
-      </section>
-      <section className="section">
-        <div className="section__container">
-          <h2 className="section__header section__header--offborder">What you need to do:</h2>
-            <Buttons tasks={tasks} hideButtons={hideButtons}/>
-        </div>
-        <div className="section__body">
-          <List tasks={tasks} hideButtons={hideButtons}/>
-        </div>
-      </section>
+      <Section
+        title = {`Add a new task`}
+        body = {<Form/>}
+      />
+      <Section
+        title = {`What you need to do:`}
+        header={<Buttons tasks={tasks} hideButtons={hideButtons}/>}
+        body = {<List tasks={tasks} hideButtons={hideButtons}/>}
+      />
     </main>
     );
 }
