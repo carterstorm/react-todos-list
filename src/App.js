@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { List } from "./List";
@@ -12,7 +12,11 @@ function App() {
     {id: 2, content: "Example 2", done: false},
   ];
   
-  let hideDone = false;
+  const [hideDone, setHideDone] = useState(false);
+
+  const toogleHideDone = () => {
+    setHideDone(hideDone => !hideDone)
+  };
 
   return (
     <Container>
@@ -23,7 +27,7 @@ function App() {
       />
       <Section
         title = {`What you need to do:`}
-        header={<Buttons tasks={tasks} hideDone={hideDone}/>}
+        header={<Buttons tasks={tasks} hideDone={hideDone} toogleHideDone={toogleHideDone}/>}
         body = {<List tasks={tasks} hideDone={hideDone}/>}
       />
     </Container>
