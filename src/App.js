@@ -7,16 +7,23 @@ import { Container } from "./Container";
 
 function App() {
 
-  let tasks = [
+  const [tasks, setTasks] = useState([
     {id: 1, content: "Example 1", done: true},
     {id: 2, content: "Example 2", done: false},
-  ];
+  ]);
   
   const [hideDone, setHideDone] = useState(false);
 
   const toogleHideDone = () => {
     setHideDone(hideDone => !hideDone)
   };
+
+  const setAllTaskDone = () => {
+    setTasks(tasks => tasks.map(task => ({
+      ...task,
+      done: true,
+    })))
+  }
 
   return (
     <Container>
@@ -27,7 +34,11 @@ function App() {
       />
       <Section
         title = {`What you need to do:`}
-        header={<Buttons tasks={tasks} hideDone={hideDone} toogleHideDone={toogleHideDone}/>}
+        header={<Buttons 
+                  tasks={tasks} 
+                  hideDone={hideDone} 
+                  toogleHideDone={toogleHideDone} 
+                  setAllTaskDone={setAllTaskDone}/>}
         body = {<List tasks={tasks} hideDone={hideDone}/>}
       />
     </Container>
