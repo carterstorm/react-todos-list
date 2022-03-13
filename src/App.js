@@ -25,6 +25,9 @@ function App() {
     })))
   }
 
+  const deleteTask = (id) => {
+    setTasks(tasks => tasks.filter(task => task.id !== id))}
+
   return (
     <Container>
       <h1>To-do list</h1>
@@ -39,7 +42,7 @@ function App() {
                   hideDone={hideDone} 
                   toogleHideDone={toogleHideDone} 
                   setAllTaskDone={setAllTaskDone}/>}
-        body = {<List tasks={tasks} hideDone={hideDone}/>}
+        body = {<List tasks={tasks} hideDone={hideDone} deleteTask={deleteTask}/>}
       />
     </Container>
   );
