@@ -6,6 +6,7 @@ const List = ({tasks, hideDone, deleteTask, toogleTaskDone}) => (
             <li key={id}
                 className={`list__item ${done && hideDone ? "list__item--hidden" : ""}`}>
                 <button
+                    onClick={() => toogleTaskDone(id)}
                     className={`list__button list__button--done material-icons`}>
                     {done ? "done" : ""}
                 </button>

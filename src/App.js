@@ -26,7 +26,18 @@ function App() {
   }
 
   const deleteTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id))}
+    setTasks(tasks => tasks.filter(task => task.id !== id))
+  }
+
+  const toogleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if(task.id === id) {
+        return (
+          {...task, done: !task.done}
+        )
+      } return task;
+    }))
+  }
 
   return (
     <Container>
@@ -42,7 +53,7 @@ function App() {
                   hideDone={hideDone} 
                   toogleHideDone={toogleHideDone} 
                   setAllTaskDone={setAllTaskDone}/>}
-        body = {<List tasks={tasks} hideDone={hideDone} deleteTask={deleteTask}/>}
+        body = {<List tasks={tasks} hideDone={hideDone} deleteTask={deleteTask} toogleTaskDone={toogleTaskDone}/>}
       />
     </Container>
   );
