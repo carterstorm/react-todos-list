@@ -1,10 +1,10 @@
 import "./style.css";
 
-const List = ({tasks, hideButtons}) => (
+const List = ({tasks, hideDone}) => (
     <ul className="list">
         {tasks.map(({id, content, done})=> (
             <li key={id}
-                className={`list__item ${done && hideButtons ? "list__item--hidden" : ""}`}>
+                className={`list__item ${done && hideDone ? "list__item--hidden" : ""}`}>
                 <button 
                     className={`list__button list__button--done material-icons`}>
                     {done ? "done" : ""}

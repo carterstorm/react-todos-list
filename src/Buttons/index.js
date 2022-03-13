@@ -1,6 +1,7 @@
 import "./style.css";
 
-const Buttons = ({tasks, hideButtons}) => {
+const Buttons = ({tasks, hideDone}) => {
+    
     if(tasks.lenght === 0) {
         return null;
     }
@@ -8,7 +9,8 @@ const Buttons = ({tasks, hideButtons}) => {
     return (
         <div className="buttons">
             <button 
-                className="button">{`${hideButtons ? "Show " : "Hide "}`} 
+                onClick={() => console.log("Siema")}
+                className="button">{`${hideDone ? "Show " : "Hide "}`} 
             done
             </button>
             <button 

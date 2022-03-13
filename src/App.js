@@ -1,3 +1,4 @@
+import React from "react";
 import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { List } from "./List";
@@ -7,15 +8,11 @@ import { Container } from "./Container";
 function App() {
 
   let tasks = [
-    {
-      id: 1, content: "Example 1", done: true,
-    },
-    {
-      id: 2, content: "Example 2", done: false
-    },
+    {id: 1, content: "Example 1", done: true},
+    {id: 2, content: "Example 2", done: false},
   ];
   
-  let hideButtons = false;
+  let hideDone = false;
 
   return (
     <Container>
@@ -26,8 +23,8 @@ function App() {
       />
       <Section
         title = {`What you need to do:`}
-        header={<Buttons tasks={tasks} hideButtons={hideButtons}/>}
-        body = {<List tasks={tasks} hideButtons={hideButtons}/>}
+        header={<Buttons tasks={tasks} hideDone={hideDone}/>}
+        body = {<List tasks={tasks} hideDone={hideDone}/>}
       />
     </Container>
   );
