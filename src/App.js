@@ -15,7 +15,7 @@ function App() {
   const [hideDone, setHideDone] = useState(false);
 
   const toogleHideDone = () => {
-    setHideDone(hideDone => !hideDone)
+    setHideDone(hideDone => !hideDone);
   };
 
   const setAllTaskDone = () => {
@@ -23,11 +23,11 @@ function App() {
       ...task,
       done: true,
     })))
-  }
+  };
 
   const deleteTask = (id) => {
     setTasks(tasks => tasks.filter(task => task.id !== id))
-  }
+  };
 
   const toogleTaskDone = (id) => {
     setTasks(tasks => tasks.map(task => {
@@ -37,14 +37,25 @@ function App() {
         )
       } return task;
     }))
-  }
+  };
+
+  const addNewTask = (newTaskContent) => {
+    setTasks(tasks => [
+      ...tasks,
+      {
+        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
+        content: newTaskContent,
+        done: false,
+      },
+    ]);
+  };
 
   return (
     <Container>
       <h1>To-do list</h1>
       <Section
         title = {`Add a new task`}
-        body = {<Form/>}
+        body = {<Form addNewTask={addNewTask}/>}
       />
       <Section
         title = {`What you need to do:`}
