@@ -7,11 +7,13 @@ import { Container } from "./Container";
 
 function App() {
 
+  const tasksFromLocalStorage = localStorage.getItem("tasks");
+
   const [tasks, setTasks] = useState(
-    JSON.parse(localStorage.getItem("tasks"))
+      tasksFromLocalStorage ? JSON.parse(tasksFromLocalStorage) : []
   );
   
-  useEffect(()=> {
+  useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks))
   }, [tasks]);
 
