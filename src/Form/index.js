@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import { StyledForm } from "../Form/styled";
-import { StyledFormInput } from "../Form/styled";
+import { StyledForm, StyledFormInput } from "../Form/styled";
 
 const Form = ({addNewTask}) => {
     

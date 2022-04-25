@@ -1,5 +1,4 @@
 import { StyledSection, StyledSectionContainer, StyledSectionHeading, StyledSectionBody } from "./styled";
-import "./style.css";
 
 const Section = ({title, header, body}) => (
     <StyledSection>
