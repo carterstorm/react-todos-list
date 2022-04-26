@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { List } from "./List";
 import { Section } from "./Section";
 import { Container } from "./Container";
 import { ThemeProvider } from "styled-components";
+import { useLocalStorageTask } from "./useLocalStorageTask";
 
 const theme = {
   screen : {
@@ -14,18 +15,8 @@ const theme = {
 
 function App() {
 
-  const getInitialTasks = () => {
-    const tasksFromLocalStorage = localStorage.getItem("tasks");
-
-    return tasksFromLocalStorage ? JSON.parse(tasksFromLocalStorage) : [];
-  };
-
-  const [tasks, setTasks] = useState(getInitialTasks);
+  const [tasks, setTasks] = useLocalStorageTask();
   
-  useEffect(() => {
-    localStorage.setItem("tasks", JSON.stringify(tasks))
-  }, [tasks]);
-
   const [hideDone, setHideDone] = useState(false);
 
   const toogleHideDone = () => {
