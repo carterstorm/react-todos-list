@@ -4,10 +4,16 @@ import { Buttons } from "./Buttons";
 import { List } from "./List";
 import { Section } from "./Section";
 import { Container } from "./Container";
+import { ThemeProvider } from "styled-components";
+
+const theme = {
+  screen : {
+    mobile: 600,
+  },
+};
 
 function App() {
 
- 
   const getInitialTasks = () => {
     const tasksFromLocalStorage = localStorage.getItem("tasks");
 
@@ -59,22 +65,24 @@ function App() {
   };
 
   return (
-    <Container>
-      <h1>To-do list</h1>
-      <Section
-        title = {`Add a new task`}
-        body = {<Form addNewTask={addNewTask}/>}
-      />
-      <Section
-        title = {`What you need to do:`}
-        header={<Buttons 
-                  tasks={tasks} 
-                  hideDone={hideDone} 
-                  toogleHideDone={toogleHideDone} 
-                  setAllTaskDone={setAllTaskDone}/>}
-        body = {<List tasks={tasks} hideDone={hideDone} deleteTask={deleteTask} toogleTaskDone={toogleTaskDone}/>}
-      />
-    </Container>
+    <ThemeProvider theme={theme}>
+      <Container>
+        <h1>To-do list</h1>
+        <Section
+          title = {`Add a new task`}
+          body = {<Form addNewTask={addNewTask}/>}
+        />
+        <Section
+          title = {`What you need to do:`}
+          header={<Buttons 
+                    tasks={tasks} 
+                    hideDone={hideDone} 
+                    toogleHideDone={toogleHideDone} 
+                    setAllTaskDone={setAllTaskDone}/>}
+          body = {<List tasks={tasks} hideDone={hideDone} deleteTask={deleteTask} toogleTaskDone={toogleTaskDone}/>}
+        />
+      </Container>
+    </ThemeProvider>
   );
 }
 

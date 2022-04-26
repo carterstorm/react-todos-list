@@ -6,7 +6,7 @@ export const StyledButtons = styled.div`
     grid-template-columns: auto auto;
     gap: 10px;
 
-    @media (max-width: 600px) {
+    @media (max-width: ${({theme}) => theme.screen.mobile}px) {
         grid-template-columns: 1fr;
         padding: 15px 25px;
 }
