@@ -4,48 +4,22 @@ import { Buttons } from "./Buttons";
 import { List } from "./List";
 import { Section } from "./Section";
 import { Container } from "./Container";
-import { useLocalStorageTask } from "./useLocalStorageTask";
+import { useTasks } from "./useTasks";
 
 function App() {
 
-  const [tasks, setTasks] = useLocalStorageTask();
+  const {
+    tasks,
+    setAllTaskDone,
+    deleteTask,
+    toogleTaskDone,
+    addNewTask,
+  } = useTasks();
   
   const [hideDone, setHideDone] = useState(false);
 
   const toogleHideDone = () => {
     setHideDone(hideDone => !hideDone);
-  };
-
-  const setAllTaskDone = () => {
-    setTasks(tasks => tasks.map(task => ({
-      ...task,
-      done: true,
-    })))
-  };
-
-  const deleteTask = (id) => {
-    setTasks(tasks => tasks.filter(task => task.id !== id))
-  };
-
-  const toogleTaskDone = (id) => {
-    setTasks(tasks => tasks.map(task => {
-      if(task.id === id) {
-        return (
-          {...task, done: !task.done}
-        )
-      } return task;
-    }))
-  };
-
-  const addNewTask = (newTaskContent) => {
-    setTasks(tasks => [
-      ...tasks,
-      {
-        id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id + 1,
-        content: newTaskContent,
-        done: false,
-      },
-    ]);
   };
 
   return (
