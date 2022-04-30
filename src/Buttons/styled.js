@@ -15,23 +15,23 @@ export const StyledButtons = styled.div`
 export const StyledButton = styled.button`
     border: none;
     border-radius: 5px;
-    background-color: teal;
-    color: #fff;
+    background-color: ${({theme}) => theme.colors.teal};
+    color: ${({theme}) => theme.colors.white};
     cursor: pointer;
     transition: .2s;
     height: 30px;
     min-width: 110px;
 
     &:hover {
-        background-color: rgb(1, 161, 161);
+        background-color: ${({theme}) => theme.colors.persian_green};
     }
 
     &:active {
-        background-color: rgb(4, 204, 204);
+        background-color: ${({theme}) => theme.colors.robin_green};
     }
 
     &:disabled, &:disabled:hover {
-        background-color: #ccc;
+        background-color: ${({theme}) => theme.colors.silver};
         cursor:auto;
     }
 `;

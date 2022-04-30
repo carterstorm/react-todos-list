@@ -11,7 +11,7 @@ export const StyledListItem = styled.li`
     grid-template-columns: 35px 1fr 35px;
     gap: 20px;
     padding: 10px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid ${({theme}) => theme.colors.gallery};
 
     ${({hidden}) => hidden && css`
         display: none;
@@ -21,7 +21,7 @@ export const StyledListItem = styled.li`
 export const StyledDoneButton = styled.button`
     border: none;
     border-radius: 5px;
-    color: white;
+    color: ${({theme}) => theme.colors.white};
     height: 35px;
     cursor: pointer;
     transition: .2s;
@@ -29,14 +29,14 @@ export const StyledDoneButton = styled.button`
 
     ${({done}) => done && css`
 
-        background-color: rgb(32, 189, 1);
+        background-color: ${({theme}) => theme.colors.harlequine_green};
 
         &:hover {
-            background-color: rgb(45, 209, 2);
+            background-color: ${({theme}) => theme.colors.harlequine_greenLight};
         };
 
         &:active {
-            background-color: rgb(105, 248, 69);
+            background-color: ${({theme}) => theme.colors.screaming_green};
         }
     `};
 `;
@@ -44,14 +44,14 @@ export const StyledDoneButton = styled.button`
 export const StyledDeleteButton = styled(StyledDoneButton)`
 
         ${({remove}) => remove && css`
-            background-color: rgb(240, 82, 82);
+            background-color: ${({theme}) => theme.colors.carnation};
 
             &:hover {
-                background-color: rgb(240, 102, 102);
+                background-color: ${({theme}) => theme.colors.burnt_sienna};
             }
 
             &:active {
-                background-color: rgb(236, 127, 127);
+                background-color: ${({theme}) => theme.colors.apricot};
             }
         `}
 `;
@@ -61,6 +61,6 @@ export const StyledTask = styled.p`
 
     ${({done}) => done && css`
         text-decoration: line-through;
-        color: red;
+        color: ${({theme}) => theme.colors.burnt_sienna};
     `}
 `;

@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const StyledSection = styled.section`
-    background-color: #fff;
+    background-color: ${({theme}) => theme.colors.white};
     margin-bottom: 5px;
-    box-shadow: 7px 22px 58px -49px rgba(66, 68, 90, 1);
+    box-shadow: 7px 22px 58px -49px ${({theme}) => theme.colors.gun_powder};
 `;
 
 export const StyledSectionContainer = styled.div`
