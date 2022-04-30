@@ -17,6 +17,7 @@ const Form = ({addNewTask}) => {
         if(newTaskContent.trim()) {
             addNewTask(newTaskContent);
             setNewTaskContent("");
+            focusInput();
         } 
         return null;
     }
@@ -29,8 +30,7 @@ const Form = ({addNewTask}) => {
                 onChange={({target})=> setNewTaskContent(target.value)}             
                 type="text"
                 placeholder="Type here what are you gonna do?"/>
-            <StyledButton
-                onClick={focusInput}>
+            <StyledButton>
                     Add task
             </StyledButton>
         </StyledForm>
