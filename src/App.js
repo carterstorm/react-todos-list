@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { List } from "./List";
-import { Section } from "./Section";
+import { Section } from "../src/common/Section";
 import { Container } from "../src/common/Container";
 import { useTasks } from "./useTasks";
 
