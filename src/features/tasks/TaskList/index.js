@@ -1,6 +1,6 @@
 import { StyledList, StyledListItem, StyledDoneButton, StyledDeleteButton, StyledTask } from "./styled";
 
-const List = ({tasks, hideDone, deleteTask, toogleTaskDone}) => (
+const TaskList = ({tasks, hideDone, deleteTask, toogleTaskDone}) => (
     <StyledList>
         {tasks.map(({id, content, done})=> (
             <StyledListItem 
@@ -28,4 +28,4 @@ const List = ({tasks, hideDone, deleteTask, toogleTaskDone}) => (
     </StyledList>
 );
 
-export {List};
+export {TaskList as List};

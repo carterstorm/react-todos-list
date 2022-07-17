@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Form } from "./features/tasks/Form";
 import { Buttons } from "../src/features/tasks/Buttons";
-import { List } from "./features/tasks/List";
+import { List } from "./features/tasks/TaskList";
 import { Section } from "../src/common/Section";
 import { Container } from "../src/common/Container";
 import { useTasks } from "./useTasks";
