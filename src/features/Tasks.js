@@ -1,12 +1,12 @@
 import React, {useState} from "react";
-import { Form } from "./features/tasks/Form";
-import { Buttons } from "../src/features/tasks/Buttons";
-import { List } from "./features/tasks/TaskList";
-import { Section } from "../src/common/Section";
-import { Container } from "../src/common/Container";
-import { useTasks } from "./useTasks";
+import { Form } from "./tasks/Form";
+import { Buttons } from "./tasks/Buttons";
+import { List } from "./tasks/TaskList";
+import { Section } from "../common/Section";
+import { Container } from "../common/Container";
+import { useTasks } from "../useTasks";
 
-function App() {
+function Tasks() {
 
   const {
     tasks,
@@ -42,4 +42,4 @@ function App() {
   );
 }
 
-export default App;
+export default Tasks;
