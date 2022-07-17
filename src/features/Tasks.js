@@ -1,15 +1,18 @@
 import React, {useState} from "react";
+import { useSelector } from "react-redux";
 import { Form } from "./tasks/Form";
 import { Buttons } from "./tasks/Buttons";
 import { List } from "./tasks/TaskList";
 import { Section } from "../common/Section";
 import { Container } from "../common/Container";
 import { useTasks } from "../useTasks";
+import { selectTasks } from "./tasksSlice";
 
 function Tasks() {
 
+const {tasks} = useSelector(selectTasks);
+
   const {
-    tasks,
     setAllTaskDone,
     deleteTask,
     toogleTaskDone,
