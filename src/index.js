@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Tasks from '../src/features/Tasks'
 import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
-import {theme} from "./theme";
-import {GlobalStyle} from "./GlobalStyle";
+import { theme } from './theme';
+import { GlobalStyle } from "./GlobalStyle";
+import { App } from '../src/App'
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme = {theme}>
       <GlobalStyle/>
-      <Tasks />
+      <App/>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
