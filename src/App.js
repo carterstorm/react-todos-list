@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import { Form } from "./Form";
-import { Buttons } from "./Buttons";
+import { Buttons } from "../src/features/tasks/Buttons";
 import { List } from "./List";
 import { Section } from "../src/common/Section";
 import { Container } from "../src/common/Container";
