@@ -3,7 +3,7 @@ import { Form } from "./Form";
 import { Buttons } from "./Buttons";
 import { List } from "./List";
 import { Section } from "./Section";
-import { Container } from "./Container";
+import { Container } from "../src/common/Container";
 import { useTasks } from "./useTasks";
 
 function App() {
