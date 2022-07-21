@@ -10,7 +10,7 @@ const tasksSlice = createSlice({
         addTask : ({tasks}, {payload}) => {
             tasks.push(payload);
         },
-        toogleTaskDone : state => {
+        toogleTasksDone : state => {
             state.hideDone = !state.hideDone;
         },
         toogleHideDone: (state, action) => {
