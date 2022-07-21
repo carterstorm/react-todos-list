@@ -1,10 +1,12 @@
 import { StyledList, StyledListItem, StyledDoneButton, StyledDeleteButton, StyledTask } from "./styled";
-import { selectTasks } from "../../tasksSlice";
-import { useSelector } from "react-redux";
+import { selectTasks, toogleHideDone } from "../../tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const TaskList = ({deleteTask, toogleTaskDone}) => {
 
     const {tasks, hideDone} = useSelector(selectTasks);
+
+    const dispatch = useDispatch(toogleHideDone);
 
     return (
             <StyledList>
@@ -15,7 +17,7 @@ const TaskList = ({deleteTask, toogleTaskDone}) => {
                     >
                         <StyledDoneButton
                             done
-                            onClick={() => toogleTaskDone(id)}
+                            onClick={() => dispatch(toogleHideDone(id))}
                             className={`material-icons`}>
                             {done ? "done" : ""}
                         </StyledDoneButton>
