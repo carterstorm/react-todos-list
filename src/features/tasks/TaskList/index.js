@@ -1,12 +1,13 @@
 import { StyledList, StyledListItem, StyledDoneButton, StyledDeleteButton, StyledTask } from "./styled";
-import { selectTasks, toogleHideDone } from "../../tasksSlice";
+import { selectTasks, toogleHideDone, deleteTask } from "../../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
 
-const TaskList = ({deleteTask, toogleTaskDone}) => {
+const TaskList = ({toogleTaskDone}) => {
 
     const {tasks, hideDone} = useSelector(selectTasks);
 
     const dispatch = useDispatch(toogleHideDone);
+    const dispatch2 = useDispatch(deleteTask);
 
     return (
             <StyledList>
@@ -27,7 +28,7 @@ const TaskList = ({deleteTask, toogleTaskDone}) => {
                         </StyledTask>
                         <StyledDeleteButton
                             remove
-                            onClick={() => deleteTask(id)}
+                            onClick={() => dispatch2(deleteTask(id))}
                             className={`material-icons`}>
                             delete
                         </StyledDeleteButton>
