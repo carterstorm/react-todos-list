@@ -10,7 +10,6 @@ function Tasks() {
 
   const {
     setAllTaskDone,
-    deleteTask,
   } = useTasks();
 
   return (
@@ -23,7 +22,7 @@ function Tasks() {
         <Section
           title = {`What you need to do:`}
           header={<Buttons setAllTaskDone={setAllTaskDone}/>}
-          body = {<TaskList deleteTask={deleteTask}/>}
+          body = {<TaskList/>}
         />
       </Container>
   );
