@@ -4,13 +4,8 @@ import { Buttons } from "./tasks/Buttons";
 import { TaskList } from "./tasks/TaskList";
 import { Section } from "../common/Section";
 import { Container } from "../common/Container";
-import { useTasks } from "../useTasks";
 
 function Tasks() {
-
-  const {
-    setAllTaskDone,
-  } = useTasks();
 
   return (
       <Container>
@@ -21,7 +16,7 @@ function Tasks() {
         />
         <Section
           title = {`What you need to do:`}
-          header={<Buttons setAllTaskDone={setAllTaskDone}/>}
+          header={<Buttons/>}
           body = {<TaskList/>}
         />
       </Container>
