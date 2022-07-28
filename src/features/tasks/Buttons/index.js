@@ -8,8 +8,7 @@ const Buttons = () => {
     const hideDone = useSelector(selectHideDone);
     const isEveryTasksDone = useSelector(selectIsEveryTasksDone);
 
-    const dispatch = useDispatch(toogleTasksDone);
-    const dispatch2 = useDispatch(setAllTasksDone);
+    const dispatch = useDispatch();
 
     if(areTasksEmpty) {
         return null;
@@ -23,7 +22,7 @@ const Buttons = () => {
                 {`${hideDone ? "Show " : "Hide "}`} done
             </StyledButton>
             <StyledButton
-                onClick={() => dispatch2(setAllTasksDone())}
+                onClick={() => dispatch(setAllTasksDone())}
                 disabled={`${isEveryTasksDone ? "disabled" : ""}`}
             >
                 Complete all tasks
