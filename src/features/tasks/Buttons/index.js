@@ -23,7 +23,7 @@ const Buttons = () => {
             </StyledButton>
             <StyledButton
                 onClick={() => dispatch(setAllTasksDone())}
-                disabled={`${isEveryTasksDone ? "disabled" : ""}`}
+                disabled={isEveryTasksDone}
             >
                 Complete all tasks
             </StyledButton>
