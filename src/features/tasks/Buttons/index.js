@@ -4,13 +4,14 @@ import { StyledButtons, StyledButton} from "../Buttons/styled";
 
 const Buttons = () => {
 
+    const areTasksEmpty = useSelector(selectTasksEmpty)
     const hideDone = useSelector(selectHideDone);
     const isEveryTasksDone = useSelector(selectIsEveryTasksDone);
 
     const dispatch = useDispatch(toogleTasksDone);
     const dispatch2 = useDispatch(setAllTasksDone);
 
-    if(selectTasksEmpty === 0) {
+    if(areTasksEmpty) {
         return null;
     }
 
