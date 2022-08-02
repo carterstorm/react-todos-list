@@ -11,9 +11,9 @@ import { App } from '../src/App'
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme = {theme}>
-        <GlobalStyle/>
-        <App/>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
       </ThemeProvider>
     </Provider>
   </React.StrictMode>,
