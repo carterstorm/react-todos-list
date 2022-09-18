@@ -7,37 +7,36 @@ const TaskList = () => {
     const tasks = useSelector(selectTasks);
     const hideDone = useSelector(selectHideDone);
 
-    const dispatch = useDispatch(toogleHideDone);
-    const dispatch2 = useDispatch(deleteTask);
+    const dispatch = useDispatch();
 
     return (
-            <StyledList>
-                {tasks.map(({id, content, done})=> (
-                    <StyledListItem 
-                        key={id}
-                        hidden={done && hideDone}
-                    >
-                        <StyledDoneButton
-                            done
-                            onClick={() => dispatch(toogleHideDone(id))}
-                            className={`material-icons`}>
-                            {done ? "done" : ""}
-                        </StyledDoneButton>
-                        <StyledTask
-                            done={done}>
-                                {content}
-                        </StyledTask>
-                        <StyledDeleteButton
-                            remove
-                            onClick={() => dispatch2(deleteTask(id))}
-                            className={`material-icons`}>
-                            delete
-                        </StyledDeleteButton>
-                    </StyledListItem>
-                ))}
-            </StyledList>
+        <StyledList>
+            {tasks.map(({ id, content, done }) => (
+                <StyledListItem
+                    key={id}
+                    hidden={done && hideDone}
+                >
+                    <StyledDoneButton
+                        done
+                        onClick={() => dispatch(toogleHideDone(id))}
+                        className={`material-icons`}>
+                        {done ? "done" : ""}
+                    </StyledDoneButton>
+                    <StyledTask
+                        done={done}>
+                        {content}
+                    </StyledTask>
+                    <StyledDeleteButton
+                        remove
+                        onClick={() => dispatch(deleteTask(id))}
+                        className={`material-icons`}>
+                        delete
+                    </StyledDeleteButton>
+                </StyledListItem>
+            ))}
+        </StyledList>
     );
 
 }
 
-export {TaskList};
+export { TaskList };
