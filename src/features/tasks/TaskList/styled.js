@@ -11,9 +11,9 @@ export const StyledListItem = styled.li`
     grid-template-columns: 35px 1fr 35px;
     gap: 20px;
     padding: 10px;
-    border-bottom: 1px solid ${({theme}) => theme.colors.gallery};
+    border-bottom: 1px solid ${({ theme }) => theme.colors.gallery};
 
-    ${({hidden}) => hidden && css`
+    ${({ hidden }) => hidden && css`
         display: none;
     `};
 `;
@@ -21,37 +21,37 @@ export const StyledListItem = styled.li`
 export const StyledDoneButton = styled.button`
     border: none;
     border-radius: 5px;
-    color: ${({theme}) => theme.colors.white};
+    color: ${({ theme }) => theme.colors.white};
     height: 35px;
     cursor: pointer;
     transition: .2s;
     
 
-    ${({done}) => done && css`
+    ${({ done }) => done && css`
 
-        background-color: ${({theme}) => theme.colors.harlequine_green};
+        background-color: ${({ theme }) => theme.colors.harlequine_green};
 
         &:hover {
-            background-color: ${({theme}) => theme.colors.harlequine_greenLight};
+            filter: brightness(110%);
         };
 
         &:active {
-            background-color: ${({theme}) => theme.colors.screaming_green};
+            filter: brightness(120%);
         }
     `};
 `;
 
 export const StyledDeleteButton = styled(StyledDoneButton)`
 
-        ${({remove}) => remove && css`
-            background-color: ${({theme}) => theme.colors.carnation};
+        ${({ remove }) => remove && css`
+            background-color: ${({ theme }) => theme.colors.carnation};
 
             &:hover {
-                background-color: ${({theme}) => theme.colors.burnt_sienna};
+                filter: brightness(110%);
             }
 
             &:active {
-                background-color: ${({theme}) => theme.colors.apricot};
+                filter: brightness(120%);
             }
         `}
 `;
@@ -59,8 +59,8 @@ export const StyledDeleteButton = styled(StyledDoneButton)`
 export const StyledTask = styled.p`
     margin: 0;
 
-    ${({done}) => done && css`
+    ${({ done }) => done && css`
         text-decoration: line-through;
-        color: ${({theme}) => theme.colors.burnt_sienna};
+        color: ${({ theme }) => theme.colors.carnation};
     `}
 `;

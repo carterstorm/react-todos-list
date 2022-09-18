@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toogleTasksDone, setAllTasksDone, selectHideDone, selectIsEveryTasksDone, selectTasksEmpty } from "../../tasksSlice";
-import { StyledButtons, StyledButton} from "../Buttons/styled";
+import { StyledButtons, StyledButton } from "../Buttons/styled";
 
 const Buttons = () => {
 
@@ -10,7 +10,7 @@ const Buttons = () => {
 
     const dispatch = useDispatch();
 
-    if(areTasksEmpty) {
+    if (areTasksEmpty) {
         return null;
     }
 
@@ -31,4 +31,4 @@ const Buttons = () => {
     );
 };
 
-export {Buttons};
+export { Buttons };

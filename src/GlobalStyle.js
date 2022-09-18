@@ -6,12 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     *, ::after, ::before {
-    box-sizing: inherit;
+        box-sizing: inherit;
     }
 
     .body {
-    font-family: 'Oswald', sans-serif;
-    color: #001a33;
-    background-color: ${({theme}) => theme.colors.gallery};
+        font-family: 'Oswald', sans-serif;
+        color: #001a33;
+        background-color: ${({ theme }) => theme.colors.gallery};
     }
 `;
