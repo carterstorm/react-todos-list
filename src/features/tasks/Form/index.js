@@ -11,32 +11,33 @@ const Form = () => {
 
     const dispatch = useDispatch();
 
-    const focusRef = useRef(null);
+    const inputRef = useRef(null);
 
     const focusInput = () => {
-        focusRef.current.focus();
+        inputRef.current.focus();
     };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        if (newTaskContent.trim()) {
-            dispatch(addTask({
-                content: newTaskContent,
-                done: false,
-                id: nanoid(),
-            }))
-            setNewTaskContent("");
+        if (!newTaskContent.trim()) {
             focusInput();
+            return;
         }
+        dispatch(addTask({
+            content: newTaskContent,
+            done: false,
+            id: nanoid(),
+        }));
+
+        setNewTaskContent("");
         focusInput();
-        return null;
     }
 
     return (
         <StyledForm onSubmit={onFormSubmit}>
             <StyledFormInput
-                ref={focusRef}
+                ref={inputRef}
                 value={newTaskContent}
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 type="text"
