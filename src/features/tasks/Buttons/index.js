@@ -10,23 +10,21 @@ const Buttons = () => {
 
     const dispatch = useDispatch();
 
-    if (areTasksEmpty) {
-        return null;
-    }
-
     return (
         <StyledButtons>
-            <StyledButton
-                onClick={() => dispatch(toogleTasksDone())}
-            >
-                {`${hideDone ? "Show " : "Hide "}`} done
-            </StyledButton>
-            <StyledButton
-                onClick={() => dispatch(setAllTasksDone())}
-                disabled={isEveryTasksDone}
-            >
-                Complete all tasks
-            </StyledButton>
+            {!areTasksEmpty && (
+                <>
+                    <StyledButton
+                        onClick={() => dispatch(toogleTasksDone())}>
+                        {`${hideDone ? "Show " : "Hide "}`} done
+                    </StyledButton>
+                    <StyledButton
+                        onClick={() => dispatch(setAllTasksDone())}
+                        disabled={isEveryTasksDone}>
+                        Complete all tasks
+                    </StyledButton>
+                </>
+            )}
         </StyledButtons>
     );
 };
