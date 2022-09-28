@@ -12,6 +12,9 @@ const Buttons = () => {
 
     return (
         <StyledButtons>
+            <StyledButton>
+                Get example tasks
+            </StyledButton>
             {!areTasksEmpty && (
                 <>
                     <StyledButton

@@ -24,6 +24,7 @@ const tasksSlice = createSlice({
         setAllTasksDone: ({ tasks }) => {
             tasks.forEach(task => task.done = true);
         },
+        axiosGetExampleTasks: () => { },
     }
 });
 
@@ -32,7 +33,8 @@ export const {
     toogleTasksDone,
     toogleHideDone,
     deleteTask,
-    setAllTasksDone
+    setAllTasksDone,
+    axiosGetExampleTasks,
 } = tasksSlice.actions;
 
 export const selectTasksState = state => state.tasks;
