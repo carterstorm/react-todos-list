@@ -11,27 +11,3 @@ export const StyledButtons = styled.div`
         padding: 15px 25px;
 }
 `;
-
-export const StyledButton = styled.button`
-    border: none;
-    border-radius: 5px;
-    background-color: ${({ theme }) => theme.colors.teal};
-    color: ${({ theme }) => theme.colors.white};
-    cursor: pointer;
-    transition: .2s;
-    height: 30px;
-    min-width: 110px;
-
-    &:hover {
-        filter: brightness(110%);
-    }
-
-    &:active {
-        filter: brightness(120%);
-    }
-
-    &:disabled, &:disabled:hover {
-        background-color: ${({ theme }) => theme.colors.silver};
-        cursor: auto;
-    }
-`;

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { toogleTasksDone, setAllTasksDone, selectHideDone, selectIsEveryTasksDone, selectAreTasksEmpty, axiosGetExampleTasks } from "../../tasksSlice";
-import { StyledButtons, StyledButton } from "../Buttons/styled";
+import { StyledButtons } from "../Buttons/styled";
+import Button from "../../../common/Button";
 
 const Buttons = () => {
 
@@ -12,20 +13,17 @@ const Buttons = () => {
 
     return (
         <StyledButtons>
-            <StyledButton onClick={() => dispatch(axiosGetExampleTasks())}>
-                Get example tasks
-            </StyledButton>
             {!areTasksEmpty && (
                 <>
-                    <StyledButton
+                    <Button
                         onClick={() => dispatch(toogleTasksDone())}>
                         {`${hideDone ? "Show " : "Hide "}`} done
-                    </StyledButton>
-                    <StyledButton
+                    </Button>
+                    <Button
                         onClick={() => dispatch(setAllTasksDone())}
                         disabled={isEveryTasksDone}>
                         Complete all tasks
-                    </StyledButton>
+                    </Button>
                 </>
             )}
         </StyledButtons>

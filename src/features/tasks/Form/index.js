@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { StyledForm, StyledFormInput } from "./styled";
-import { StyledButton } from "../Buttons/styled";
+import Button from "../../../common/Button";
 import { addTask } from "../../tasksSlice";
 import { nanoid } from "@reduxjs/toolkit";
 
@@ -42,9 +42,9 @@ const Form = () => {
                 onChange={({ target }) => setNewTaskContent(target.value)}
                 type="text"
                 placeholder="Type here what are you gonna do?" />
-            <StyledButton>
+            <Button>
                 Add task
-            </StyledButton>
+            </Button>
         </StyledForm>
     )
 };
