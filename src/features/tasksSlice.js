@@ -24,7 +24,12 @@ const tasksSlice = createSlice({
         setAllTasksDone: ({ tasks }) => {
             tasks.forEach(task => task.done = true);
         },
+
         axiosGetExampleTasks: () => { },
+
+        setTasks: (state, { payload: tasks }) => {
+            state.tasks = tasks;
+        },
     }
 });
 
@@ -35,6 +40,7 @@ export const {
     deleteTask,
     setAllTasksDone,
     axiosGetExampleTasks,
+    setTasks,
 } = tasksSlice.actions;
 
 export const selectTasksState = state => state.tasks;
