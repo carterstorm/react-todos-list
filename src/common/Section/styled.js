@@ -17,14 +17,16 @@ export const StyledSectionContainer = styled.div`
 `;
 
 export const StyledSectionHeading = styled.h2`
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto;
     padding: 25px;
     margin: 0;
     border-bottom: none;
 
     @media (max-width: ${({ theme }) => theme.screen.mobile}px) {
         padding: 15px 25px;
+        grid-template-columns: 1fr;
+        gap: 20px;
 }
 `;
 
