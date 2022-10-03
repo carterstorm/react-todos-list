@@ -8,18 +8,15 @@ export default styled.button`
     cursor: pointer;
     transition: .2s;
     height: 30px;
-    min-width: 110px;
+    /* width: 120px; */
+    min-width: 130px;
     font-size: 16px;
 
     &:hover {
         filter: brightness(110%);
     }
 
-    &:active {
-        filter: brightness(120%);
-    }
-
-    &:disabled, &:disabled:hover {
+    &:disabled {
         background-color: ${({ theme }) => theme.colors.silver};
         cursor: auto;
     }

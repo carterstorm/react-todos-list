@@ -1,6 +1,6 @@
 export const theme = {
   screen: {
-    mobile: 600,
+    mobile: 650,
   },
 
   colors: {

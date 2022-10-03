@@ -5,12 +5,14 @@ import { TaskList } from "./tasks/TaskList";
 import { Section } from "../common/Section";
 import { Container } from "../common/Container";
 import Button from "../common/Button";
-import { axiosGetExampleTasks } from "./tasksSlice";
-import { useDispatch } from "react-redux";
+import { fetchGetExampleTasks } from "./tasksSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { selectAreTasksLoading } from "./tasksSlice";
 
 function Tasks() {
 
   const dispatch = useDispatch();
+  const areTasksLoading = useSelector(selectAreTasksLoading);
 
   return (
     <Container>
@@ -19,8 +21,10 @@ function Tasks() {
         title={`Add a new task`}
         body={<Form />}
         exampleTaskButton={
-          <Button onClick={() => dispatch(axiosGetExampleTasks())}>
-            Get example tasks
+          <Button
+            disabled={areTasksLoading}
+            onClick={() => dispatch(fetchGetExampleTasks())}>
+            {areTasksLoading ? "Loading..." : "Get example tasks"}
           </Button>}
       />
       <Section
