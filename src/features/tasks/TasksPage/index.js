@@ -1,15 +1,14 @@
 import React from "react";
-import { Form } from "./tasks/Form";
-import { Buttons } from "./tasks/Buttons";
-import { TaskList } from "./tasks/TaskList";
-import { Section } from "../common/Section";
-import { Container } from "../common/Container";
-import Button from "../common/Button";
-import { fetchGetExampleTasks } from "./tasksSlice";
+import { Form } from "./Form";
+import { Buttons } from "./Buttons";
+import { TaskList } from "./TaskList";
+import { Section } from "../../../common/Section";
+import { Container } from "../../../common/Container";
+import Button from "../../../common/Button";
 import { useDispatch, useSelector } from "react-redux";
-import { selectAreTasksLoading } from "./tasksSlice";
+import { selectAreTasksLoading, fetchGetExampleTasks } from "../../tasksSlice";
 
-export const Tasks = () => {
+export const TasksPage = () => {
 
   const dispatch = useDispatch();
   const areTasksLoading = useSelector(selectAreTasksLoading);

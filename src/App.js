@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter, Link, Switch, Route } from "react-router-dom";
-import { Tasks } from "../src/features/Tasks";
+import { TasksPage } from "./features/tasks/TasksPage/index.js";
 import { Author } from "./features/author/Author";
 
 export const App = () => (
@@ -11,13 +11,13 @@ export const App = () => (
                     <Link to="/tasks">Tasks</Link>
                 </li>
                 <li>
-                    <Link to="/about">About me</Link>
+                    <Link to="/about">About author</Link>
                 </li>
             </ul>
 
             <Switch>
                 <Route path="/tasks" >
-                    <Tasks />
+                    <TasksPage />
                 </Route>
                 <Route path="/about" >
                     <Author />
