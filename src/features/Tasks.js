@@ -9,7 +9,7 @@ import { fetchGetExampleTasks } from "./tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { selectAreTasksLoading } from "./tasksSlice";
 
-function Tasks() {
+export const Tasks = () => {
 
   const dispatch = useDispatch();
   const areTasksLoading = useSelector(selectAreTasksLoading);
@@ -34,6 +34,4 @@ function Tasks() {
       />
     </Container>
   );
-}
-
-export default Tasks;
+};
