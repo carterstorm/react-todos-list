@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { toogleTasksDone, setAllTasksDone, selectHideDone, selectIsEveryTasksDone, selectAreTasksEmpty, axiosGetExampleTasks } from "../../tasksSlice";
+import { toogleTasksDone, setAllTasksDone, selectHideDone, selectIsEveryTasksDone, selectAreTasksEmpty } from "../../tasksSlice";
 import { StyledButtons } from "../Buttons/styled";
 import Button from "../../../common/Button";
 
@@ -16,8 +16,9 @@ const Buttons = () => {
             {!areTasksEmpty && (
                 <>
                     <Button
+                        disabled={isEveryTasksDone}
                         onClick={() => dispatch(toogleTasksDone())}>
-                        {`${hideDone ? "Show " : "Hide "}`} done
+                        {`${hideDone ? "Show" : "Hide"}`} done
                     </Button>
                     <Button
                         onClick={() => dispatch(setAllTasksDone())}
