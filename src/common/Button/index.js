@@ -8,7 +8,6 @@ export default styled.button`
     cursor: pointer;
     transition: .2s;
     height: 30px;
-    /* width: 120px; */
     min-width: 130px;
     font-size: 16px;
 

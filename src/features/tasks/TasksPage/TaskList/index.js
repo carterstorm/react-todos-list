@@ -1,6 +1,7 @@
 import { StyledList, StyledListItem, StyledDoneButton, StyledDeleteButton, StyledTask } from "./styled";
 import { toogleHideDone, deleteTask, selectTasks, selectHideDone } from "../../../tasksSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const TaskList = () => {
 
@@ -24,7 +25,7 @@ const TaskList = () => {
                     </StyledDoneButton>
                     <StyledTask
                         done={done}>
-                        {content}
+                        <Link to={`/tasks/${id}`}>{content}</Link>
                     </StyledTask>
                     <StyledDeleteButton
                         remove
