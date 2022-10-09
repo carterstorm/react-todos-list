@@ -17,4 +17,8 @@ export const Item = styled.li`
 export const StyledNavLink = styled(NavLink)`
     color: ${({ theme }) => theme.colors.white};
     text-decoration: none;
+
+    &.active {
+        font-weight: bold;
+    }
 `;

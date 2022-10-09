@@ -8,12 +8,12 @@ export const Navigation = () => (
     <nav>
         <List>
             <Item>
-                <StyledNavLink to="/tasks">
+                <StyledNavLink activeClassName="active" to="/tasks">
                     Tasks
                 </StyledNavLink>
             </Item>
             <Item>
-                <StyledNavLink to="/about">
+                <StyledNavLink activeClassName="active" to="/about">
                     About author
                 </StyledNavLink>
             </Item>
