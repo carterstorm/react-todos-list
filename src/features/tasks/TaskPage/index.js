@@ -14,8 +14,12 @@ export const TaskPage = () => {
         <Container>
             <h1>To-do list</h1>
             <Section
-                title={task.content}
-                body={<>nana</>}
+                title={task ? task.content : "Task not found"}
+                body={
+                    <>
+                        <strong>Complete: </strong> {task.done ? "Yes" : "No"}
+                    </>
+                }
             />
         </Container>
     );
