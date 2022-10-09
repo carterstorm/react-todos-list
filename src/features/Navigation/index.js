@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Redirect, Route, Switch } from "react-router-dom";
 import { Author } from "../author/Author";
 import { TasksPage } from "../tasks/TasksPage";
 import { Item, List, StyledNavLink } from "./styled";
@@ -26,6 +26,10 @@ export const Navigation = () => (
 
             <Route path="/about">
                 <Author />
+            </Route>
+
+            <Route path="/">
+                <Redirect to="/tasks" />
             </Route>
         </Switch>
     </nav>
