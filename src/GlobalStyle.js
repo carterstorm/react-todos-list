@@ -11,7 +11,7 @@ export const GlobalStyle = createGlobalStyle`
 
     .body {
         font-family: 'Oswald', sans-serif;
-        color: #001a33;
+        color: ${({ theme }) => theme.colors.base_color};
         background-color: ${({ theme }) => theme.colors.gallery};
     }
 `;
