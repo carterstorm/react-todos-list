@@ -1,6 +1,7 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 import { Author } from "../author/Author";
+import { TaskPage } from "../tasks/TaskPage";
 import { TasksPage } from "../tasks/TasksPage";
 import { Item, List, StyledNavLink } from "./styled";
 
@@ -20,6 +21,9 @@ export const Navigation = () => (
         </List>
 
         <Switch>
+            <Route path="/tasks/:id">
+                <TaskPage />
+            </Route>
             <Route path="/tasks">
                 <TasksPage />
             </Route>
