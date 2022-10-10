@@ -1,9 +1,13 @@
 import { Input } from "../Input";
+import { Wrapper } from "./styled";
 
 export const Search = () => {
 
     return (
-        <Input
-            placeholder="Type here to find a task" />
+        <Wrapper>
+            <Input
+                placeholder="Type here to find a task"
+            />
+        </Wrapper>
     );
 };
