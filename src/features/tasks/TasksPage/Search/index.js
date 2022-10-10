@@ -12,6 +12,7 @@ export const Search = () => {
         <Wrapper>
             <Input
                 placeholder="Type here to find a task"
+                value={query || ""}
             />
         </Wrapper>
     );
