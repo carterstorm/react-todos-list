@@ -1,10 +1,11 @@
-import { useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import { Input } from "../Input";
 import { Wrapper } from "./styled";
 
 export const Search = () => {
 
     const location = useLocation();
+    const history = useHistory();
     const searchParams = new URLSearchParams(location.search);
     const query = searchParams.get("search");
 
@@ -14,6 +15,8 @@ export const Search = () => {
         } else {
             searchParams.set("search", target.value);
         };
+
+        history.push(`${location.pathname}?${searchParams.toString()}`)
     };
 
     return (
