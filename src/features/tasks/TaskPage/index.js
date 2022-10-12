@@ -14,11 +14,12 @@ export const TaskPage = () => {
         <Container>
             <h1>To-do list</h1>
             <Section
-                title={task ? task.content : "Task not found"}
-                body={
+                title={task ? task.content : "Task not found 😱"}
+                body={!!task && (
                     <>
                         <strong>Complete: </strong> {task.done ? "Yes" : "No"}
                     </>
+                )
                 }
             />
         </Container>
