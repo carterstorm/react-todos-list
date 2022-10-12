@@ -3,10 +3,11 @@ import { StyledList, StyledListItem, StyledDoneButton, StyledDeleteButton, Style
 import { toogleHideDone, deleteTask, selectHideDone, selectTasksByQuery } from "../../../tasksSlice";
 import { StyledLink } from "./styled";
 import { useQueryParameter } from "../queryParameters";
+import { queryParamName } from "../queryParamName";
 
 const TaskList = () => {
 
-    const query = useQueryParameter("search");
+    const query = useQueryParameter(queryParamName);
 
     const tasks = useSelector(state => selectTasksByQuery(state, query));
     const hideDone = useSelector(selectHideDone);
