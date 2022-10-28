@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme';
 import { GlobalStyle } from "./GlobalStyle";
-import { App } from '../src/App'
+import { App } from '../src/App';
 
 ReactDOM.render(
   <React.StrictMode>
