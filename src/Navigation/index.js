@@ -14,7 +14,7 @@ export const Navigation = () => (
                 </StyledNavLink>
             </Item>
             <Item>
-                <StyledNavLink activeClassName="active" to="/about">
+                <StyledNavLink activeClassName="active" to="/author">
                     About author
                 </StyledNavLink>
             </Item>
@@ -28,7 +28,7 @@ export const Navigation = () => (
                 <TasksPage />
             </Route>
 
-            <Route path="/about">
+            <Route path="/author">
                 <AuthorPage />
             </Route>
 
