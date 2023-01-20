@@ -34,7 +34,7 @@ export const Navigation = () => (
             </Route>
 
             <Route path="/">
-                <Redirect to="/tasks" />
+                <Redirect to={toTasks()} />
             </Route>
         </Switch>
     </nav >
