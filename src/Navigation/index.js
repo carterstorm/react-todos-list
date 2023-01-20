@@ -1,8 +1,8 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { AuthorPage } from "../author/Author";
-import { TaskPage } from "../tasks/TaskPage";
-import { TasksPage } from "../tasks/TasksPage";
+import { AuthorPage } from "../features/Author/Author";
+import { TaskPage } from "../features/tasks/TaskPage";
+import { TasksPage } from "../features/tasks/TasksPage";
 import { Item, List, StyledNavLink } from "./styled";
 
 export const Navigation = () => (
