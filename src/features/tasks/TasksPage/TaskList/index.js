@@ -4,6 +4,7 @@ import { toogleHideDone, deleteTask, selectHideDone, selectTasksByQuery } from "
 import { StyledLink } from "./styled";
 import { useQueryParameter } from "../queryParameters";
 import { queryParamName } from "../queryParamName";
+import { toTask } from "../../../../routes";
 
 const TaskList = () => {
 
@@ -29,7 +30,7 @@ const TaskList = () => {
                     </StyledDoneButton>
                     <StyledTask
                         done={done}>
-                        <StyledLink to={`/tasks/${id}`}>{content}</StyledLink>
+                        <StyledLink to={toTask({ id: id })}>{content}</StyledLink>
                     </StyledTask>
                     <StyledDeleteButton
                         remove
