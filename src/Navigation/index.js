@@ -3,6 +3,7 @@ import { Redirect, Route, Switch } from "react-router-dom";
 import { AuthorPage } from "../features/Author/Author";
 import { TaskPage } from "../features/tasks/TaskPage";
 import { TasksPage } from "../features/tasks/TasksPage";
+import { toAuthor, toTask, toTasks } from "../routes";
 import { Item, List, StyledNavLink } from "./styled";
 
 export const Navigation = () => (
@@ -21,14 +22,14 @@ export const Navigation = () => (
         </List>
 
         <Switch>
-            <Route path="/tasks/:id">
+            <Route path={toTask()}>
                 <TaskPage />
             </Route>
-            <Route path="/tasks">
+            <Route path={toTasks()}>
                 <TasksPage />
             </Route>
 
-            <Route path="/author">
+            <Route path={toAuthor()}>
                 <AuthorPage />
             </Route>
 
@@ -36,5 +37,5 @@ export const Navigation = () => (
                 <Redirect to="/tasks" />
             </Route>
         </Switch>
-    </nav>
+    </nav >
 );
