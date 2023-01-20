@@ -12,6 +12,8 @@ export const List = styled.ul`
 
 export const Item = styled.li`
     margin: 20px;
+    width: 100px;
+    text-align: center;
 `;
 
 export const StyledNavLink = styled(NavLink)`
