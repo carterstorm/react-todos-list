@@ -10,12 +10,12 @@ export const Navigation = () => (
     <nav>
         <List>
             <Item>
-                <StyledNavLink activeClassName="active" to="/tasks">
+                <StyledNavLink activeClassName="active" to={toTasks()}>
                     Tasks
                 </StyledNavLink>
             </Item>
             <Item>
-                <StyledNavLink activeClassName="active" to="/author">
+                <StyledNavLink activeClassName="active" to={toAuthor()}>
                     About author
                 </StyledNavLink>
             </Item>
