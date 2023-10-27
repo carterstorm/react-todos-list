@@ -1,6 +1,11 @@
-import { StyledSection, StyledSectionContainer, StyledSectionHeading, StyledSectionBody } from "./styled";
+import {
+  StyledSection,
+  StyledSectionContainer,
+  StyledSectionHeading,
+  StyledSectionBody,
+} from "./styled";
 
-const Section = ({ title, header, body, exampleTaskButton }) => (
+export const Section = ({ title, header, body, exampleTaskButton }) => (
   <StyledSection>
     <StyledSectionContainer>
       <StyledSectionHeading>
@@ -14,5 +19,3 @@ const Section = ({ title, header, body, exampleTaskButton }) => (
     </StyledSectionBody>
   </StyledSection>
 );
-
-export { Section };
