@@ -19,23 +19,23 @@ It was the initial application that I coded from the beginning and learning step
 
 ### Example of use
 
-## ![Example of use](https://github.com/carterstorm/react-todos-list/blob/main/images/simple_use.gif?raw=true)
+![Example of use](https://github.com/carterstorm/react-todos-list/blob/main/images/simple_use.gif?raw=true)
 
 ### Searching tasks
 
-## ![Searching elements](https://github.com/carterstorm/react-todos-list/blob/main/images/searching%20elements.gif?raw=true)
+![Searching elements](https://github.com/carterstorm/react-todos-list/blob/main/images/searching%20elements.gif?raw=true)
 
 ### Get example tasks
 
-## ![Get example tasks](https://github.com/carterstorm/react-todos-list/blob/main/images/get_example_tasks.gif?raw=true)
+![Get example tasks](https://github.com/carterstorm/react-todos-list/blob/main/images/get_example_tasks.gif?raw=true)
 
 ### Task page
 
-## ![Task page](https://github.com/carterstorm/react-todos-list/blob/main/images/task_page.gif?raw=true)
+![Task page](https://github.com/carterstorm/react-todos-list/blob/main/images/task_page.gif?raw=true)
 
 ### Routes
 
-## ![Routes](https://github.com/carterstorm/react-todos-list/blob/main/images/page_routes.gif?raw=true)
+![Routes](https://github.com/carterstorm/react-todos-list/blob/main/images/page_routes.gif?raw=true)
 
 ## Available Scripts
 
