@@ -13,7 +13,7 @@ export default styled.button`
 
     &:hover {
         filter: brightness(110%);
-    }
+    };
 
     &:disabled {
         background-color: ${({ theme }) => theme.colors.silver};
