@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import { AuthorPage } from "../features/Author/Author";
+import { Author } from "../features/author/Author";
 import { TaskPage } from "../features/tasks/TaskPage";
 import { TasksPage } from "../features/tasks/TasksPage";
 import { toAuthor, toTask, toTasks } from "../routes";
@@ -30,7 +30,7 @@ export const Navigation = () => (
             </Route>
 
             <Route path={toAuthor()}>
-                <AuthorPage />
+                <Author />
             </Route>
 
             <Route path="/">
