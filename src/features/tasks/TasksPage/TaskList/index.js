@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { StyledList, StyledListItem, StyledDoneButton, StyledDeleteButton, StyledTask } from "./styled";
-import { toogleHideDone, deleteTask, selectHideDone, selectTasksByQuery } from "../../../tasksSlice";
+import { toggleHideDone, deleteTask, selectHideDone, selectTasksByQuery } from "../../../tasksSlice";
 import { StyledLink } from "./styled";
 import { useQueryParameter } from "../queryParameters";
 import { queryParamName } from "../queryParamName";
@@ -24,7 +24,7 @@ const TaskList = () => {
                 >
                     <StyledDoneButton
                         done
-                        onClick={() => dispatch(toogleHideDone(id))}
+                        onClick={() => dispatch(toggleHideDone(id))}
                         className={`material-icons`}>
                         {done ? "done" : ""}
                     </StyledDoneButton>

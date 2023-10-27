@@ -12,10 +12,10 @@ const tasksSlice = createSlice({
         addTask: ({ tasks }, { payload: task }) => {
             tasks.push(task);
         },
-        toogleTasksDone: state => {
+        toggleTasksDone: state => {
             state.hideDone = !state.hideDone;
         },
-        toogleHideDone: ({ tasks }, { payload: taskId }) => {
+        toggleHideDone: ({ tasks }, { payload: taskId }) => {
             const index = tasks.findIndex(({ id }) => id === taskId);
             tasks[index].done = !tasks[index].done;
         },
@@ -44,8 +44,8 @@ const tasksSlice = createSlice({
 
 export const {
     addTask,
-    toogleTasksDone,
-    toogleHideDone,
+    toggleTasksDone,
+    toggleHideDone,
     deleteTask,
     setAllTasksDone,
     fetchGetExampleTasks,
