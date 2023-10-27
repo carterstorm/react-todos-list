@@ -6,7 +6,6 @@ import { useSelector } from "react-redux";
 import { getTaskById } from "../../tasksSlice";
 
 export const TaskPage = () => {
-
     const { id } = useParams();
     const task = useSelector(state => getTaskById(state, id));
 
@@ -17,7 +16,7 @@ export const TaskPage = () => {
                 title={task ? task.content : "Task not found 😱"}
                 body={!!task && (
                     <>
-                        <strong>Complete: </strong> {task.done ? "Yes" : "No"}
+                        <strong>Complete: </strong>{task.done ? "Yes" : "No"}
                     </>
                 )
                 }
